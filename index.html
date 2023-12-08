@@ -808,23 +808,16 @@
         }
 
         $("form").submit(function (e) {
-    e.preventDefault();
+          e.preventDefault();
 
-    var $f = $(this),
-        item = $f.find("#item_name").val(),
-        quantity = $f.find("#quantity").val() || 1,
-        className = $f.find("#list_item").val();
+          var $f = $(this),
+            item = $f.find("#item_name").val(),
+            quantity = $f.find("#quantity").val() || 1,
+            className = $f.find("#list_item").val();
 
-    // Check if any of the required fields is empty before proceeding
-    if (item.trim() === "" || quantity.trim() === "" || className.trim() === "") {
-        alert("Please fill in all the required fields.");
-        return;
-    }
-
-    addItem(item, quantity, className);
-    $f.get(0).reset();
-});
-
+          addItem(item, quantity, className);
+          $f.get(0).reset();
+        });
       });
     </script>
   </body>
