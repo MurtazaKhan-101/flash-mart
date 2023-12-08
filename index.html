@@ -196,7 +196,7 @@
                         </fieldset>
                     </form>
                     <h1>Groceries</h1>
-                    <ul class="groceries-ul"></ul>
+                    <ul class="groceries-list"></ul>
                 </main>
             </div>
         </section>
@@ -644,9 +644,9 @@
                     cartItemsContainer.appendChild(cartItemElement);
 
                     // Display items in the <ul> for checkout
-                    $ul.append(
-                        `<li class="${item.className}">${item.quantity} ${item.name}</li>`
-                    );
+                    // $ul.append(
+                    //     `<li class="${item.className}">${item.quantity} ${item.name}</li>`
+                    // );
                 });
 
                 // const checkoutSection = document.getElementById("checkout");
@@ -842,7 +842,7 @@
             // });
 
             $(function () {
-                var $ul = $(".groceries-ul");
+                var $ul = $(".groceries-list");
 
                 function addItem(name, quantity, className) {
                     $ul.append(
